@@ -76,15 +76,4 @@ func messageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 			log.Printf("error sending message: %v", err)
 		}
 	}
-
-	if m.Content == config.BotPrefix + "QUNT" {
-		fmt.Println("QUNT commend received")
-		price := price.CheckPrice("QUNT")
-		message := fmt.Sprintf("Current QUNT price: %.8f USD", price)
-		fmt.Printf("Sending message: %s\n", message)	
-		_, err := s.ChannelMessageSend(m.ChannelID, message)
-		if err!= nil {
-            log.Printf("error sending message: %v", err)
-        }
-	}
 }
