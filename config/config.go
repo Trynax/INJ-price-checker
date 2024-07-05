@@ -34,7 +34,7 @@ func ReadConfig () error{
 		return err
 	}
 
-	Token = config.Token
+	Token = "MTI1NzMxOTgzNzQxMjEwMjE1NA.GY2EaZ.zmzH-SM8UptTJpjPNDfF7TMl_0Mep1nTjN1tCY"
 	BotPrefix = config.BotPrefix
 
 	return nil
